@@ -1,4 +1,5 @@
-![alt text](https://herc.one/wp-content/uploads/2018/03/hercLogoFront.png "Herc Logo") # Django Test Server
+![alt text](https://herc.one/wp-content/uploads/2018/03/hercLogoFront.png "Herc Logo") 
+# Django Test Server
 ### For Mock Endpoints
 -------
 ## Database:
@@ -25,6 +26,13 @@ MacOS Tools for the Database:
 5. Open Postico. Create a database called "hercules."
 6. git clone this repository
 7. cd into the repository. Run "Pipenv shell". This spawns a virtual environment. It will also look at the Pipfile(located in the root directory) and install all the dependencies listed there.
-  
+8. run `pipenv run ./manage.py migrate`
+9. run `pipenv run ./manage.py createsuperuser`
+10. create your superuser login credentials. 
+11. Run the server with `pipenv run ./manage.py runserver`
+
+##### Did you make a change to your database models?
+- Update your migration files with `pipenv run ./manage.py makemigrations`
+- Then run `pipenv run ./manage.py migrate`  
  
 
