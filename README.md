@@ -1,4 +1,4 @@
-# Simple Django Test Server
+# Simple Django Test Server ![alt text](https://herc.one/wp-content/uploads/2018/03/hercLogoFront.png "Herc Logo")
 ### For Mock Endpoints
 -------
 ## Database:
