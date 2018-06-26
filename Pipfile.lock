@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "2b66ea2cb07a4bb7350c6afd94c3010a9a8129c4e8e4d276d4874b15a4603630"
+            "sha256": "1b2a121703d747bbdcec9f511c7fdd57b5981b8f331329c261421818f4efe8a6"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -16,6 +16,12 @@
         ]
     },
     "default": {
+        "cassandra-driver": {
+            "hashes": [
+                "sha256:61b670fb2ba95d51d91fa7b589aae3666df494713f5d1ed78bb5c510778d77f0"
+            ],
+            "version": "==3.13.0"
+        },
         "click": {
             "hashes": [
                 "sha256:29f99fc6125fbc931b758dc053b3114e55c77a6e4c6c3a2674a2dc986016381d",
@@ -37,6 +43,14 @@
                 "sha256:69ff89fa3c3a8337015478a1a0744f52a9fef5d12c1efa01a01f99bcce9bf10c"
             ],
             "version": "==2.0.6"
+        },
+        "django-cassandra-engine": {
+            "hashes": [
+                "sha256:d54d5172a53216d3d3e58582c17afec0641fcaef67862e90b49f3e5cfd768d5a",
+                "sha256:ef8936c229490de95ba40d6f91438fb633df6177ad65818de2ec19c6f0c6dfc8"
+            ],
+            "index": "pypi",
+            "version": "==1.5.0"
         },
         "djzen": {
             "hashes": [
@@ -84,6 +98,13 @@
                 "sha256:c06425302f2cf668f1bba7a0a03f3c1d34d4ebeef2c72003da308b3947c7f749"
             ],
             "version": "==2018.4"
+        },
+        "six": {
+            "hashes": [
+                "sha256:70e8a77beed4562e7f14fe23a786b54f6296e34344c23bc42f07b15018ff98e9",
+                "sha256:832dc0e10feb1aa2c68dcc57dbb658f1c7e65b9b61af69048abc87a2db00a0eb"
+            ],
+            "version": "==1.11.0"
         },
         "whitenoise": {
             "hashes": [

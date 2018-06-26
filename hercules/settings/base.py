@@ -40,7 +40,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'djzen',
-    
+    'django_cassandra_engine',
+
     'account',
 ]
 
@@ -88,10 +89,35 @@ WSGI_APPLICATION = 'hercules.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/2.0/ref/settings/#databases
 
-DATABASES = {}
-DATABASES['default'] = dj_database_url.config(
-  default='postgres://postgres:postgres@localhost:5432/hercules')
+# DATABASES = {}
+# DATABASES['default'] = dj_database_url.config(
+#   default='postgres://postgres:postgres@localhost:5432/hercules')
 
+DATABASES = { # Django Cassandra Engine
+ """
+ https://gist.github.com/hkhamm/a9a2b45dd749e5d3b3ae
+ pip install cql
+ brew install cassandra
+    To have launchd start cassandra now and restart at login:
+      brew services start cassandra
+    Or, if you don't want/need a background service you can just run:
+      cassandra -f
+note:
+    reduced amount of memory that cassandra uses here: /usr/local/etc/cassandra/cassandra-env.sh
+ """
+    'default': {
+        'ENGINE': 'django_cassandra_engine',
+        'NAME': 'db',
+        'TEST_NAME': 'test_db',
+        'HOST': 'db1.example.com,db2.example.com',
+        'OPTIONS': {
+            'replication': {
+                'strategy_class': 'SimpleStrategy',
+                'replication_factor': 1
+            }
+        }
+    }
+}
 
 # Password validation
 # https://docs.djangoproject.com/en/2.0/ref/settings/#auth-password-validators
