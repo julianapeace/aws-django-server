@@ -1,4 +1,3 @@
-
 ![alt text](https://herc.one/wp-content/uploads/2018/03/hercLogoFront.png "Herc Logo") 
 # Django Test Server
 ### For Mock Endpoints
