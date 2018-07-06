@@ -20,6 +20,12 @@ BASE_DIR = os.path.dirname(
     )
 )
 
+MEDIA_URL = '/static/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'static')
+
+STATICFILES_DIRS = [
+    MEDIA_ROOT
+]
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/2.0/howto/deployment/checklist/
@@ -30,6 +36,8 @@ SECRET_KEY = os.environ.get('SECRET_KEY', None)
 ALLOWED_HOSTS = [
     'herc-django.herokuapp.com',
     'localhost',
+    'localhost:8000',
+    'julianamei.com',
 ]
 
 
@@ -73,7 +81,7 @@ ROOT_URLCONF = 'hercules.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': ['./templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
